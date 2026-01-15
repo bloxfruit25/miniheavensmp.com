@@ -1,25 +1,11 @@
-import { useState } from 'react'
-import Router from 'next/router'
-
-export default function Register(){
-  const [email,setEmail]=useState(''); const [pass,setPass]=useState('')
-  async function submit(e){
-    e.preventDefault()
-    const res = await fetch('/api/auth?action=register',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email,password:pass})})
-    if(res.ok) Router.push('/login')
-    else {
-      const j = await res.json().catch(()=>({error:'fail'}))
-      alert('Register failed: ' + (j.error || 'unknown'))
-    }
-  }
+import Link from 'next/link'
+export default function Store(){
   return (
     <main>
-      <h1>Register</h1>
-      <form onSubmit={submit}>
-        <input placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
-        <input placeholder="Password" type="password" value={pass} onChange={e=>setPass(e.target.value)} required />
-        <button type="submit">Register</button>
-      </form>
+      <h1>Store</h1>
+      <p>This demo store uses site coins (manual top-up). Admin will credit coins after proof of payment.</p>
+      <p>Edit <code>data/products.json</code> to add ranks, colors, and prices.</p>
+      <p><Link href="/admin"><a>Admin Dashboard</a></Link></p>
     </main>
   )
 }
