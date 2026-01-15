@@ -1,5 +1,5 @@
 {
-  "name": "minihesven-site",
+  "name": "miniheaven-site",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,9 +13,5 @@
     "react-dom": "18.2.0",
     "jsonwebtoken": "^9.0.0",
     "cookie": "^0.6.2"
-  "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start"
+  }
 }
-    
