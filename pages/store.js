@@ -1,11 +1,8 @@
-import Link from 'next/link'
-export default function Store(){
+export default function Store() {
   return (
-    <main>
+    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Store</h1>
-      <p>This demo store uses site coins (manual top-up). Admin will credit coins after proof of payment.</p>
-      <p>Edit <code>data/products.json</code> to add ranks, colors, and prices.</p>
-      <p><Link href="/admin"><a>Admin Dashboard</a></Link></p>
+      <p>Store is under construction. Check back soon!</p>
     </main>
   )
 }
