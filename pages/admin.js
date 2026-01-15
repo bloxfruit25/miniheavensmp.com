@@ -1,25 +1,13 @@
-import { useState } from 'react'
-import Router from 'next/router'
-
-export default function Register(){
-  const [email,setEmail]=useState(''); const [pass,setPass]=useState('')
-  async function submit(e){
-    e.preventDefault()
-    const res = await fetch('/api/auth?action=register',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email,password:pass})})
-    if(res.ok) Router.push('/login')
-    else {
-      const j = await res.json().catch(()=>({error:'fail'}))
-      alert('Register failed: ' + (j.error || 'unknown'))
-    }
-  }
+import {useEffect,useState} from 'react'
+export default function Admin(){
+  const [ok,setOk] = useState(false)
+  useEffect(()=>{ /* placeholder: in production check session & role via API */ setOk(true)},[])
+  if(!ok) return <div>Checking admin...</div>
   return (
     <main>
-      <h1>Register</h1>
-      <form onSubmit={submit}>
-        <input placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
-        <input placeholder="Password" type="password" value={pass} onChange={e=>setPass(e.target.value)} required />
-        <button type="submit">Register</button>
-      </form>
+      <h1>Admin Dashboard</h1>
+      <p>Welcome admin. Use this page to credit coins, review proofs, and fulfill orders.</p>
+      <p>To download your resource pack locally, follow README instructions.</p>
     </main>
   )
 }
