@@ -1,1 +1,0 @@
-hi guys this is my new minecraft sever website all info will be in the wbesite it takig me so long rn to make it but if u see that miniheavensmp.com opened and ready that mean that i made the website and the sever will be ready soon and i will tell u in discord sever when the sever is out :)
