@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rank_vip",
+    "name": "VIP",
+    "color": "#00AAFF",
+    "price_coins": 500,
+    "description": "VIP rank — nice perks."
+  },
+  {
+    "id": "rank_mvp",
+    "name": "MVP",
+    "color": "#FFAA00",
+    "price_coins": 1200,
+    "description": "MVP rank — extra perks."
+  }
+]
