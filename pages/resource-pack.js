@@ -1,9 +1,8 @@
-export default function RP(){
+export default function ResourcePack() {
   return (
-    <main>
+    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Resource Pack</h1>
-      <p>The resource pack is private. Admin users only can download it via the admin API. The pack is NOT public on the site.</p>
-      <p>Installation instructions for tLauncher etc. are in the README.</p>
+      <p>Download the server resource pack here (placeholder).</p>
     </main>
   )
 }
